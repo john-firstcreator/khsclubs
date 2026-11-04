@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHS Clubs — Explore clubs perfect for you</title>
+  <meta name="description" content="Search every club at school: sponsors, categories, and how to join. No login, no accounts." />
+  <link rel="icon" type="image/png" href="./klein-k.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400..700&family=Young+Serif&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./base.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#clubs">Skip to clubs</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <p class="brand">
+        <img class="brand-mark" src="./klein-k.png" alt="" width="40" height="48" />
+        KHS Clubs
+      </p>
+      <p class="header-note">Made by a Bearkat</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="clubs-heading">
+      <div class="container section-header">
+        <h1 id="clubs-heading">Explore Clubs Perfect For You</h1>
+        <p>Every club at school, who sponsors it, and how to get involved.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <section id="clubs" aria-label="Club directory">
+        <div class="controls">
+          <div class="search-field">
+            <label for="club-search">Search clubs</label>
+            <input type="search" id="club-search" name="club-search" placeholder="Try “robotics,” “art,” or a sponsor’s name" autocomplete="off" />
+          </div>
+          <fieldset class="filter-group">
+            <legend>What’s your passion?</legend>
+            <div class="chip-row" id="club-filters">
+              <button type="button" class="chip" data-category="All" aria-pressed="true">All</button>
+              <button type="button" class="chip" data-category="Arts" aria-pressed="false">Arts</button>
+              <button type="button" class="chip" data-category="STEM" aria-pressed="false">STEM</button>
+              <button type="button" class="chip" data-category="Service" aria-pressed="false">Service</button>
+              <button type="button" class="chip" data-category="Competition" aria-pressed="false">Competition</button>
+              <button type="button" class="chip" data-category="Career" aria-pressed="false">Career</button>
+              <button type="button" class="chip" data-category="Culture" aria-pressed="false">Culture</button>
+              <button type="button" class="chip" data-category="Community" aria-pressed="false">Community</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <p class="result-count" id="club-count" aria-live="polite">Loading clubs…</p>
+
+        <ul class="card-grid" id="club-results" role="list"></ul>
+
+        <div class="empty-state" id="club-empty">
+          <h2>No clubs match that search</h2>
+          <p>Try a different word, or clear the filter — new clubs are added as sponsors verify them.</p>
+          <button type="button" class="chip" id="club-reset">Clear search and filters</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Club list: November 2026.</strong> Meeting times, locations, and join details will be added as each sponsor confirms them.</p>
+      <p>No accounts, no ads, no tracking — just a public directory. To correct a club listing, talk to the staff sponsor.</p>
+    </div>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
